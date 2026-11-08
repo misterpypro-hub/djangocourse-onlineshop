@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'allauth',
     'allauth.account',
+    'rosetta',
 
+    'cart',
     'accounts',
     'pages',
     'products',
@@ -127,11 +129,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
+LOCALE_PATHS = (
+    'templates/locale',
+)
+
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'fa'
 
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
+
+LANGUAGES = [
+    ('fa', 'Persian'),
+    ('en', 'English'),
+]
 
 USE_L10N = True
 USE_I18N = True
